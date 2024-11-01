@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct AkanImage: View {
+    var image : Image
     var body: some View {
-        Image("tori")
+        image
             .clipShape(Circle())
             .overlay{
                 Circle().stroke(.white, lineWidth: 4)
@@ -19,5 +20,5 @@ struct AkanImage: View {
 }
 
 #Preview {
-    AkanImage()
+    AkanImage(image : Image("turtlerock"))
 }

@@ -7,10 +7,11 @@
 
 import SwiftUI
 import MapKit
-public let coordinate = CLLocationCoordinate2D(latitude: 35.68212910206595, longitude: 139.73599814873106)
+
 struct MapView: View {
+    var coordinate : CLLocationCoordinate2D
     var body: some View {
-        Map(initialPosition: .region(region)) {
+        Map(position: .constant(.region(region))) {
             Marker("My location", coordinate: coordinate)
         }
     }
@@ -24,5 +25,5 @@ struct MapView: View {
 }
 
 #Preview {
-    MapView()
+    MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
 }
